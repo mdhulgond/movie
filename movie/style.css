@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.search::placeholder {
+  color: #7378c5;
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:0.2rem;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+.movie-info span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+
+/* 
+The provided CSS code appears to be styling for a web page, likely to be used in conjunction with the JavaScript code you 
+provided for displaying movie information. Here's a breakdown of the CSS code:
+
+1) The code begins with an @import rule that imports a Google Fonts stylesheet, making the "Poppins" 
+    font available for use on the web page.
+
+2) The :root pseudo-class defines global CSS custom properties (variables) for the primary and secondary colors used in the design.
+
+3) The * selector sets the box-sizing property to border-box, which ensures that padding and borders are included in the 
+    element's total width and height.
+
+4) Styles are applied to the body element, setting the background color, font-family, and removing the default margin.
+
+5) The header element is styled with a background color, padding, and flex layout for aligning content to the right.
+
+6) The .search class styles the search input field. It has a transparent background, a border, and other font-related properties. 
+    Placeholder text is styled with a different color, and the field changes style when focused.
+
+7) The main element is configured to display its children as a centered, wrapped flex container.
+
+8) Styles are applied to the .movie class, which represents the movie containers. It sets the width, margin, 
+    background color, box shadow, and other properties to create a card-like appearance for the movie.
+
+9) The .movie img selector sets the width of movie poster images to 100% to ensure they fill their container.
+
+10) The .movie-info class styles the movie information section, including the title, rating, and background color. 
+    It also defines the appearance of the rating span based on its class.
+
+11) The .overview class styles the movie overview section that appears when you hover over a movie. It sets the background color, 
+    padding, and uses CSS transitions for a smooth reveal when hovering over a movie container.
+
+12) The .movie:hover .overview selector specifies that the overview should be revealed when hovering over a movie.
+
+Overall, this CSS code is responsible for styling the web page, making it visually appealing and providing a user-friendly 
+experience when interacting with the movie information displayed using the JavaScript code you provided earlier. The CSS code includes 
+styles for fonts, colors, input fields, movie cards, and the hover effect for movie details.
+
+
+*/
